@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 1280px;
+ }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  background-color: whitesmoke;
+  color:whitesmoke;
+  line-height:1.6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  overflow: hidden;
+  position: sticky;
+  top:0;
+  color:whitesmoke;
+  z-index: 1;
+  background-color: #2C6BBC;
+  height: 8rem;
+}
+
+.header-logo {
+  margin:0 1rem;
+}
+
+.header-hamburguer {
+  display: block;
+  position:absolute;
+  top: 25%;
+  right: 5%;
+  margin:1rem 0 0 0;
+}
+
+.nav-links {
+  position:fixed;
+  line-height: 1.4;
+  width: 100%;
+  padding: 0;
+  left:100%;
+  transition: .5s;
+  background: lightgrey;
+  z-index: 2;
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links.on {
+  left:0;
+} 
+
+.nav-links ul li {
+  list-style: none;
+  height: 2rem;
+  width: 100%;
+  border-bottom: 1px solid whitesmoke;
+  padding: .7rem;
+}
+
+.nav-links ul li a  {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.on a {
+  text-decoration: none;
+  transition: .5s;
+}
+
+.nav-links ul li:hover {
+  background-color: #88C449;
+  color: white;
+  transition:0.5s;
+}
+ 
+@media only screen and (min-width: 1024px) { 
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2C6BBC;
+    }
+
+  .header {
+    width: 20%;
+    align-self: center;
+    }
+
+  #icon {
+    display: none;
+   }
+
+  .nav-links {
+    position: inherit;
+    align-self: center;
+    margin-left:30%;
+    margin-right: 5%;
+    background-color: #2C6BBC;
+    transition: 0s;
+    }
+
+  .nav-links ul {
+    display: flex;
+    }
+
+  .nav-links ul li {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-bottom: none;
+    font-size: 20px;
+    width: 60%;
+    }
+
+  .nav-links ul li:hover {
+    border-radius: 15px;
+    background-color: #88C449;;
+    text-align: center;
+    transition: .8s;
+    }
+}
